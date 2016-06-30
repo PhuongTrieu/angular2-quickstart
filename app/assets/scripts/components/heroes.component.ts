@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
-
+import {ViewEncapsulation}    from '@angular/core';
 import { Hero }                from '../models/hero';
 import { HeroService }         from '../services/hero.service';
 import { HeroDetailComponent } from './hero-detail.component';
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: 'app/views/heroes.component.html',
-  styleUrls:  ['app/assets/stylesheets/heroes.component.css'],
+  templateUrl: '/partials/heroes.component.html',
+  styleUrls:  ['/css/heroes.css'],
+  encapsulation: ViewEncapsulation.Native,
   directives: [HeroDetailComponent]
 })
 export class HeroesComponent implements OnInit {

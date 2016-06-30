@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, OnDestroy, Output } from '@angular/core';
-
+import {ViewEncapsulation}    from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Hero }        from '../models/hero';
@@ -7,8 +7,9 @@ import { HeroService } from '../services/hero.service';
 
 @Component({
   selector: 'my-hero-detail',
-  templateUrl: 'app/views/hero-detail.component.html',
-  styleUrls: ['app/assets/stylesheets/hero-detail.component.css']
+  templateUrl: '/partials/hero-detail.component.html',
+  encapsulation: ViewEncapsulation.Native,
+  styleUrls: ['/css/hero-detail.css']
 })
 export class HeroDetailComponent implements OnInit, OnDestroy {
   @Input() hero: Hero;

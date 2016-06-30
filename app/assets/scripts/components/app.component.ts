@@ -1,7 +1,10 @@
+//// <reference path="../typings/browser.d.ts" />
+
 import { Component }          from '@angular/core';
 import { ROUTER_DIRECTIVES }  from '@angular/router';
 
 import { HeroService }        from '../services/hero.service';
+import {ViewEncapsulation}    from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -14,7 +17,8 @@ import { HeroService }        from '../services/hero.service';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['app/assets/stylesheets/app.component.css'],
+  styleUrls: ['/css/app.css'],
+  encapsulation: ViewEncapsulation.Native,
   directives: [ROUTER_DIRECTIVES],
   providers: [
     HeroService,
