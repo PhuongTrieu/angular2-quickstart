@@ -1,0 +1,4 @@
+/public/bower
+/node_modules/*
+/typings/*
+/.sass-cache/*/*

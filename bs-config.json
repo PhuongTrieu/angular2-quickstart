@@ -1,0 +1,11 @@
+{
+    "port": 8686,
+    "files": [
+        "./*.{html,htm,css,js}",
+        "./**/*.{html,htm,css,js}"
+    ],
+    "server": {
+        "baseDir": "./app/views"
+    },
+    "ghostMode": false
+}
